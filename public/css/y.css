@@ -1,0 +1,17 @@
+body{
+    text-align: center;
+}
+
+table {
+    border-style: solid ;
+    border-color: aqua;
+    border-width: 1px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table tr td{
+    border-style: solid;
+    border-color: aqua;
+   
+}
