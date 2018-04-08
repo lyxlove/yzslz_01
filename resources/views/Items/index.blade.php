@@ -14,7 +14,7 @@
     <body>
         <pre>
         @foreach($data as $mdata)
-        {{$mdata}}
+        {{$mdata.item_name}}
         @endforeach
         </pre>
     </body>
