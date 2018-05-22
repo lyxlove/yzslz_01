@@ -15,6 +15,17 @@
     </script>
 </head>
 
+<<<<<<< HEAD
+        </script>
+    </head>
+    <body>
+        <pre>
+        @foreach($data as $mdata)
+        {{$mdata.item_name}}
+        @endforeach
+        </pre>
+    </body>
+=======
 <body>
 <a href="{{url('/')}}">首页</a>
         <button onclick="OpenAddPage()" >添加</button>
@@ -40,6 +51,7 @@
         </tbody>
     </table>
 </body>
+>>>>>>> 37dfc276b0b9d8726055959874277cb97ea094b9
 
 </html>
 
