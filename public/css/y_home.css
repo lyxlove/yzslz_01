@@ -1,0 +1,99 @@
+nav
+{
+    background: skyblue;
+    color: white;
+    height: 50px;
+}
+
+.header ul 
+{
+    list-style: none;
+    float: right;
+    margin: 0;
+}
+
+nav ul li
+{
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+.header .logo
+{
+    float: left;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+.header a
+{
+    line-height: inherit;
+    text-decoration: none;
+    display: inline-block;
+    height: inherit;
+}
+
+#banner
+{
+  background: aliceblue;
+  height: 700px; 
+
+}
+
+#banner .inner
+{
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 160px;
+}
+
+#banner h1
+{
+    margin: 0;
+}
+
+
+.content
+{
+    border: solid 1px green;
+    height: 800px;
+    width: 100%;
+}
+
+.div-hr
+{
+    width: 100%;
+    height: 2px;
+    margin: 20px auto;
+}
+
+.first-section
+{
+    text-align: center;
+    padding: 100px 0;
+}
+
+.first-section .div-hr
+{
+    width: 60%;
+    background:#078494;
+}
+
+.icon-group
+{
+    margin-top: 30px;
+}
+
+.icon-group .icon
+{
+    display:inline-block;
+    background: wheat;
+    width: 60px;
+    height: 60px;   
+    transform: rotate(45deg);
+    margin: 30px;
+}
+

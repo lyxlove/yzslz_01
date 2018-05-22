@@ -11,12 +11,20 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('home/index');
+});*/
+
+Route::get('/', 'HomeController@index');
+Route::get('home', function()
+{
+    return view('home/home');
 });
 
-
-
+Route::get('main', function()
+{
+    return view('home/main');
+});
 
 Route::get('home/items',['as'=>'items','uses'=>'ItemsController@index']);
 
@@ -37,3 +45,4 @@ Route::get('itemtype/delete/{id}','ItemTypeController@DeleteItemType');
 Route::get('dayprice/index',['as'=>'dayprice','uses'=>'DayPriceController@index']);
 Route::get('dayprice/add','DayPriceController@DayPriceDetail');
 Route::post('dayprice/save','DayPriceController@SaveDayPrice');
+Route::get('dayprice/chart/{id}','DayPriceController@PriceChart');

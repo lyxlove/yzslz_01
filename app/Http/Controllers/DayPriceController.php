@@ -12,9 +12,9 @@ class DayPriceController extends Controller
 {
     public function index()
     {
-        $typeList = ItemType::all();
+        $typeList = TGetItemType();
 
-        $sqlStr = "SELECT c.price,c.record_day,y_items.item_name FROM (
+        $sqlStr = "SELECT c.price,c.record_day,y_items.item_name,y_items.item_id FROM (
             SELECT a.* FROM y_day_price a,(SELECT max(b.record_day) AS record_day,item_id FROM y_day_price b GROUP BY item_id)  b
             WHERE a.item_id = b.item_id AND a.record_day = b.record_day) as  c
             INNER JOIN 	y_items ON y_items.item_id = c.item_id";
@@ -46,6 +46,13 @@ class DayPriceController extends Controller
     {
         DayPrice::create($_POST);
         return 0;
+    }
+
+    public function PriceChart($id)
+    {
+        $strSql = "SELECT * FROM y_day_price WHERE item_id = ".$id;
+        $list = DB::select($strSql);
+        return view('DayPrice/pricechart',compact('list'));
     }
 
 }

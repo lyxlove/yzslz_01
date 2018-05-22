@@ -28,7 +28,7 @@
         <tbody>
             @foreach($list as $mlist)
             <tr>
-                <td>{{$mlist->item_name}}</td>
+                <td><a onclick="ViewChart({{$mlist->item_id}})">{{$mlist->item_name}}</a></td>
                 <td>{{$mlist->price}}</td>
                 <td>{{$mlist->record_day}}</td>
             </tr>
@@ -42,9 +42,19 @@ function OpenAddPage() {
     layer.open({
             type:2,
             skin:'layui-layer-demo',
-            area:['1000px','80  0px'],
+            area:['1000px','800px'],
             content:"{{url('dayprice/add')}}"
+            
         });
+}
+
+function ViewChart(item_id) {
+    layer.open({
+        type:2,
+        area:['1000px','800px'],
+        content:"{{url('dayprice/chart')}}"+"/"+item_id
+    });
+    
 }
 
 function ChangePrice(price)
