@@ -28,7 +28,7 @@
         <section class="first-section">
             <div class="wrapper"> 
                 <div>
-                    <h2>初心不泯</h2>
+                    <h2>一个人的开荒</h2>
                     <div class="div-hr"></div>
                     <p>都道初心不负，而初心是何物</p>
                 </div>

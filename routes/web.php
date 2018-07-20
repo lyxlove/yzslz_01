@@ -46,3 +46,6 @@ Route::get('dayprice/index',['as'=>'dayprice','uses'=>'DayPriceController@index'
 Route::get('dayprice/add','DayPriceController@DayPriceDetail');
 Route::post('dayprice/save','DayPriceController@SaveDayPrice');
 Route::get('dayprice/chart/{id}','DayPriceController@PriceChart');
+
+//Menu
+Route::get('menu/index','MenuController@index');
